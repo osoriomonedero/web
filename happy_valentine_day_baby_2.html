@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raylie Valentine day</title>
+    <style>
+        body {
+            background-color: pink;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+            margin: 0;
+            overflow: hidden;
+        }
+        .contenedor {
+            text-align: center;
+            font-family: Comic sans MS;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .imagenes {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 200px;
+        }
+        .izquierda {
+            left: 10px;
+            margin-left: 20px; /* Ajusta el margen izquierdo para centrar en su espacio lateral */
+        }
+        .derecha {
+            right: 10px;
+            margin-right: 20px; /* Ajusta el margen derecho para centrar en su espacio lateral */
+        }
+        .botones {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .boton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+        }
+        .normal {
+            background-color: lightblue;
+        }
+        .escurridizo {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <img src="imagen 2 izquierda.png" alt="Imagen izquierda" class="imagenes izquierda">
+    <div class="contenedor">
+        <p id="texto">Today is a very special day, but I also want to celebrate it with another person who has earned a space in my heart too.<br>❤️I want you to invite our daughter so that you can enjoy the gift together.❤️</p>
+    </div>
+    <div class="botones">
+        <button class="boton normal" onclick="window.location.href='happy_valentine_day_baby_3.html'">❤️Yes baby, she is here with me❤️</button>
+        <button class="boton escurridizo" id="movible">No, i dont want share</button>
+    </div>
+    <img src="imagen 2 derecha.png" alt="Imagen derecha" class="imagenes derecha">
+    <script>
+        const boton = document.getElementById("movible");
+        boton.addEventListener("mouseover", () => {
+            boton.style.position = "absolute";
+            const maxX = window.innerWidth - boton.clientWidth - 20;
+            const maxY = window.innerHeight - boton.clientHeight - 20;
+            const x = Math.random() * maxX;
+            const y = Math.random() * maxY;
+            boton.style.left = `${x}px`;
+            boton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
